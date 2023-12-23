@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java_Script</title>
+
+</head>
+<body>
+    <script>
+        // console.log("hello world");  message afficher sur la console
+        // console.warn("this is a warning");
+        // console.error("this is a warning"); gerer les bugs
+        // console.clear();
+
+       var name="Massilia";
+       var age=25;
+
+       console.log("je m'appelle " +name + " et j'ai " +age + " ans ");
+       console.log(`je m'appelle ${name} et j'ai ${age} ans`);
+
+       //   les conditions
+       const Hour=new Date().getHours();
+       var message;
+       if(Hour<18){
+
+                   message="bonjour";
+                   console.log(message);
+       }else{
+                   message="bonsoir";
+                   console.log(message);
+       }
+
+       var mat1=12;
+       var mat2=13;
+       var moy;
+       moy=((mat1 + mat2)/2);
+       console.log("la moyenne est" + moy);
+
+       if(moy<10){
+        
+        console.log("ajournee");
+       }
+       else if(moy>10){
+        console.log("vous avez reussi");
+       }
+       else{
+        console.log("passable");
+       }
+
+       const Jour=new Date().getDay();
+       console.log(Jour);
+
+       var  Jour1;
+      switch(Jour){
+
+        case 0:
+            Jour1=" Hey!!,Today is sunday";
+            console.log(Jour1);
+            break;
+        case 1:
+            Jour1=" Hey!!,Today is Monday";
+            console.log(Jour1);
+            break;   
+        case 2:
+            Jour1="Hey!!,Today is tuesday";
+            console.log(Jour1);
+            break;
+        case 3:
+            Jour1=" Hey!!,Today is Wednesday";
+            console.log(Jour1);
+            break;   
+         case 4:
+            Jour1="Hey!!,Today is thursday";
+            console.log(Jour1);
+            break;
+        case 5:
+            Jour1="Hey!!,Today is friday";
+            console.log(Jour1);
+            break;   
+         case 6:
+            Jour1="Hey!!,Today is Saturday";
+            console.log(Jour1);
+            break;   
+
+            default:
+                console.log("hi");
+                break;
+
+      }
+
+        alert("salut Devloppeurs")
+      var fruit="Orange" ;
+
+      switch(fruit){
+        case "Banane":
+            alert("Hello");
+            break;
+
+        case "Pomme":
+            alert("Salut");
+            break;
+
+         default:
+            alert("c'est un autre fruit ");
+                break;
+
+      }
+
+    //   les boucles
+      
+    for(let i=0;i<10;i++ ){
+        console.log(i+ "les incriments de 10");
+
+    }
+  
+
+    var somme=0;
+    for(let i=0;i<=10;i++ ){
+        if(i%2==0){
+            somme =somme+i;
+       
+        } 
+       
+        
+    } console.log(" la somme est "+somme);
+
+    // les functions
+ 
+    function Salutation(){
+        console.log(" <br> Je suis Massilia!! la meilleur devloppeuse au monde");
+    }
+    Salutation();
+
+    function Somme(Number1,Number2){
+        
+        return Number1+ Number2;
+    }
+
+    console.log(Somme(1233,123))
+
+    function Incriment(Number1){
+        
+        return Number1+ 1;
+    }
+
+    console.log(Incriment(1233));
+
+   
+    function Max(Number1,Number2,Number3){
+        var Max=Number1;
+
+        if(Number2>Max ){
+            Max=Number2;
+        }
+         if(Number3>Max){
+            Max=Number3;
+
+        }
+        
+        return Max;
+    }
+
+    console.log(Max(1,122,33));
+    // console.log.Math.Max 1,122,33;
+
+    // function Pair(Number){
+    //     if(Number %2 ==0){
+    //         console.log(" le chiffre est pair");
+
+    //     }else{
+    //         console.log(" le chiffre n'est pair");
+    //     }
+
+    // }
+    // console.log(Pair(1));
+
+    function Pair(Number){
+       
+         
+        return    Number %2 ==0 ? console.log(" le chiffre est pair"):console.log(" le chiffre n'est pair");
+
+    }
+     Pair(2);
+
+
+
+
+
+    
+
+
+       
+
+
+
+    </script>
+    
+    <br>
+</body>
+</html>
