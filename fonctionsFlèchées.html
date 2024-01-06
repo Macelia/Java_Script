@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctions_fléchées</title>
+</head>
+
+
+<body>
+    <script>
+        
+        function somme(a,b){
+            return a+b;
+        }
+        console.log("la somme des deux chiffres est",somme(12,12));
+
+    //    La fonction fléchée équivalente est 
+
+    const sommeEquiv = (a,b) => a+b;
+
+    console.log("la somme équivalente est ",sommeEquiv(12,23))
+
+    function Pair(n){
+
+        if(n%2==0){
+            return true
+        }
+        return false
+
+    }
+    console.log(Pair(5));
+
+      const PairEquiv = (n) =>  n % 2==0 ? true: false      //les condition de terner
+
+        console.log("la somme équivalente est ",PairEquiv(12))
+
+    </script>
+    
+</body>
+</html>
