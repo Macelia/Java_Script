@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <script>
+    
+    function Soustraction(a,b){
+        return a-b;
+    }
+    var a=12, b=1;
+    
+    console.log(`${a} - ${b} =`,Soustraction(a,b));
+
+    // sa fonction fléchée equivalente est
+
+    const SoustractionEquiv = (a,b) => a-b;
+    console.log(` le résultat de la soustraction avec la fonction fléchée est ${a} - ${b} =`,SoustractionEquiv(a,b));
+
+   //------------------------------------------------------------
+
+       function Salutation(Hour,sexe){
+          var message;
+        if(Hour<18){
+
+                   message="bonjour";
+                   console.log(message,sexe);
+        }else{
+                   message="bonsoir";
+                   console.log(message,sexe);
+       }
+
+       }
+       const Hour = new Date().getHours();
+       const sexe="Madame";
+       console.log("hey"+Salutation(Hour,sexe));
+
+         // sa fonction fléchée equivalente est
+
+         const SalutEquiv = (Hour1,sexe1) =>{ 
+           
+            
+            if(Hour1<18){
+
+             message="bonjour";
+             console.log(message,sexe1);
+            }else{
+              message="bonsoir";
+              console.log(message,sexe1);
+            }}
+          const Hour1=19;
+            var sexe1="Madame";
+         console.log("SlatutEquiv",SalutEquiv(Hour1,sexe1));
+
+        //  selon les conditions de terner
+
+        const SalutFlechTern = (Hour,sexe) => { var message = Hour<18 ? "bonjour" :"bonsoir";
+        console.log(message,sexe);
+    };
+
+    console.log(SalutFlechTern(12,"mm"))
+         
+
+
+
+
+    </script>
+    
+</body>
+</html>
