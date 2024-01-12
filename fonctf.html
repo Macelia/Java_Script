@@ -36,33 +36,66 @@
        }
        const Hour = new Date().getHours();
        const sexe="Madame";
-       console.log("hey"+Salutation(Hour,sexe));
+       console.log("hey "+Salutation(Hour,sexe));
 
          // sa fonction fléchée equivalente est
 
-         const SalutEquiv = (Hour1,sexe1) =>{ 
-           
-            
-            if(Hour1<18){
+         const SalutEquiv = (Hour) =>{ 
+
+        
+            if(Hour<18){
 
              message="bonjour";
-             console.log(message,sexe1);
+             console.log(message);
             }else{
               message="bonsoir";
-              console.log(message,sexe1);
-            }}
-          const Hour1=19;
-            var sexe1="Madame";
-         console.log("SlatutEquiv",SalutEquiv(Hour1,sexe1));
+              console.log(message);
+            }
+          }
+
+          
+              // var sexe1="Madame";
+              SalutEquiv(1);
 
         //  selon les conditions de terner
 
-        const SalutFlechTern = (Hour,sexe) => { var message = Hour<18 ? "bonjour" :"bonsoir";
-        console.log(message,sexe);
-    };
+        const SalutFlechTern = (Hour,sexe) =>  message = Hour<18 ? "bonjour" :"bonsoir" 
 
-    console.log(SalutFlechTern(12,"mm"))
+          console.log("Hey Developpers",SalutFlechTern(Hour))
          
+        function Mineur(y){
+         
+
+          if(y<=18){console.log("tu est mineur car ton age est inferieur à 18");}
+          else{console.log("tu est mageur car ton age est superieur à 18");}
+        }
+        Mineur(12);
+        // la fonction selon les conditions de terner
+
+        function MineurM(x){ x<=18 ? console.log("mineur"):console.log("mageur")}
+        MineurM(12);
+        // la fonction fléchées
+         const MineurMfleche =(x) => { x<=18 ? console.log("mineur"):console.log("maJeur")}
+         MineurMfleche(25);
+
+         var moy;
+        
+        function Moyanne(a1,b1){
+         
+           
+              moy=((a1 + b1)/2);
+
+             if(moy<10){           console.log(" tu es ajournee");}
+             else if(moy>10){      console.log("tu as réussi reussi");}
+             else{                 console.log("passable");}
+        }
+        console.log(Moyanne(12,15));
+       // la fonction fléchée equivalante
+         const MoyenneFlechee = (a1,b1) => {
+          moy=((a1 + b1)/2);
+          moy<10 ? "tu es ajourné": moy>10 ? "tu as réussi" : "tu es passable" 
+         }
+         Moyanne(12,17);
 
 
 
