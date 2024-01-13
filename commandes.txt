@@ -1,0 +1,28 @@
+  git add .
+
+  git config --global user.email massiliasaidoune630@gmail.com
+   git config --global user.name 
+
+  git commit -m "exemple"
+
+  git push  
+  git push -u origin main 
+
+
+git branch 
+git branch ES6        pour creer une branche
+
+git checkout ES6
+
+git push --set-upstream origin ES6
+
+git merge main
+
+git checkout main
+
+git commit -m "exemple"
+
+git push
+
+
+   
