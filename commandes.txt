@@ -25,4 +25,7 @@ git commit -m "exemple"
 git push
 
 
+git pull ramener les derniere modifs
+
+
    
