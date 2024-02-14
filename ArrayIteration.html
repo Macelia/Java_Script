@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les itérations dans les tableaux</title>
+</head>
+<body>
+    
+
+    <script>
+
+     const numbers =[45,4,9,16,25];
+     function Doubleforeach(num) {
+        console.log(num*2);
+     }
+     numbers.forEach(Doubleforeach); 
+
+     const num =[1,2,3,4,5];
+     function DoubleMap(num){
+        return num*2;
+     }
+     const d= num.map(DoubleMap); 
+     console.log(d,"la fonction map");
+
+     const numbers1 =[1,2,3,4,5,6,7];
+
+     const result = numbers1.filter( (num)=> num%2 === 0);
+     console.log(result,"filter");
+
+     const numbers2 = [1,2,3,4,5,6,7];
+
+     const somme = numbers2.reduce((accumulateur, currentValue) => accumulateur+ currentValue, 1)
+     
+     console.log(somme);   // reduce reduit à une seule valeur + une valeur
+
+     const fruit = ['banane', 'pomme','cerise','poire', 4]; 
+     const indexFruit = fruit.indexOf("poire");
+     console.log("index de :"+indexFruit+"." );
+
+     const findfruit = fruit.find((element)=> element.length>=6);
+     console.log(findfruit);
+
+     const numbers3 = [2,4,6,8,10];
+     const AllNumbers3 =numbers3.every((num)=> num%2 ===0);
+     console.log(AllNumbers3);
+
+     const numbers4 = [10,20,30,40,50];
+
+     const number4Index =numbers4.findIndex((num)=> num>25);
+     console.log("la fonction findIndex"+number4Index);
+
+
+</script>
+</body>
+</html>
