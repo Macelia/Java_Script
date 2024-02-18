@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesse</title>
+</head>
+<body>
+    <h1>Promesse</h1>
+    <p id="Demo"></p>
+
+    <script>
+        // function MyDisplayer(x) {
+        //     document.getElementById("Demo").insnerHTML=x;
+        //   }
+
+        //   let MyPromise =new Promise(function (MyResultat, MyReject){
+        //   let x = 0;
+        //   if(x==5){
+        //     MyResultat("Success")}
+        //   else{
+        //     MyReject("Error")}
+        // })
+
+        //   MyPromise.then(
+
+        //   function(Error){
+        //     MyDisplayer(Error);
+        //   },
+        //   function (value) {
+        //     MyDisplayer(value);
+        //   }
+
+        // )
+
+        //////////////////////////////////////////////Meme exemple mais avec le Async await
+
+        function MyDisplayer(x) {
+            document.getElementById("Demo").innerHTML=x;
+          }
+
+          let MyPromise =new Promise(function (MyResultat, MyReject){
+          let x = 0;
+          if(x==5){
+            MyResultat("Success")}
+          else{
+            MyReject("Error")}
+            
+        })
+
+         const ResultPromise = async() =>{ 
+            try{
+               const   Value=await MyPromise;
+               MyDisplayer(Value); 
+            }
+            catch(Error){
+                MyDisplayer(Error)
+                
+            }
+         }
+
+         ResultPromise();
+
+        
+
+
+    </script>
+
+</body>
+</html>

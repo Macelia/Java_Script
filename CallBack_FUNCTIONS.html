@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CallBack functions </title>
+</head>
+<body>
+    <h1> Fonctions Js </h1>
+    <p> Le résultat de calcul est :</p>
+    <p id="Demo"></p>
+
+    <script>
+          function MyDisplayer(x) {
+            document.getElementById("Demo").innerHTML=x;
+          }
+
+          function MyCalculator(num1,num2, MyCallBack) {
+            let somme = num1 + num2;
+            MyCallBack(somme);
+          }
+
+          MyCalculator(5,8, MyDisplayer);
+          
+
+    </script>
+    
+</body>
+</html>

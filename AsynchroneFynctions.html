@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchron_functions</title>
+</head>
+<body>
+    <h2>fonctions setInterval et SetTimeout</h2>
+    <p id="Demo"></p>
+    <script>
+        
+        // setTimeout( MyFunction, 3000  );
+        
+        // function MyFunction(){
+            
+        //     document.getElementById("Demo").innerHTML="Hello Devs";
+        // }
+
+        setInterval( MyFunction1, 3000);
+        function MyFunction1(){
+            let d = new Date();
+            document.getElementById("Demo").innerHTML=
+            
+            d.getHours()+ ":" +
+            d.getMinutes()+ ":"+
+            d.getSeconds();
+
+        }
+
+    </script>
+    
+</body>
+</html>

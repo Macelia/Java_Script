@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les itérations dans les tableaux</title>
+</head>
+<body>
+    
+
+    <script>
+
+     const numbers =[45,4,9,16,25];
+     function Doubleforeach(num) {
+        console.log(num*2);
+     }
+     numbers.forEach(Doubleforeach); 
+
+     const num =[1,2,3,4,5];
+     function DoubleMap(num){
+        return num*2;
+     }
+     const d= num.map(DoubleMap); 
+     console.log(d,"la fonction map");
+
+     const numbers1 =[1,2,3,4,5,6,7];
+
+     const result = numbers1.filter( (num)=> num%2 === 0);
+     console.log(result,"filter");
+
+     const numbers2 = [1,2,3,4,5,6,7];
+
+     const somme = numbers2.reduce((accumulateur, currentValue) => accumulateur+ currentValue, 1)
+     
+     console.log(somme);   // reduce reduit à une seule valeur + une valeur
+
+     const fruit = ['banane', 'pomme','cerise','poire', 4]; 
+     const indexFruit = fruit.indexOf("poire");
+     console.log("index de :"+indexFruit+"." );
+
+     const findfruit = fruit.find((element)=> element.length>=6);
+     console.log(findfruit);
+
+     const numbers3 = [2,4,6,8,10];
+     const AllNumbers3 =numbers3.every((num)=> num%2 ===0);
+     console.log(AllNumbers3);
+
+     const numbers4 = [10,20,30,40,50];
+
+     const number4Index =numbers4.findIndex((num)=> num>25);
+     console.log("la fonction findIndex"+number4Index);
+
+
+</script>
+</body>
+</html>
+Ce code HTML contient des scripts JavaScript qui illustrent différentes façons d'itérer sur des tableaux et de manipuler les données à l'intérieur.
+ Voici une explication claire et concise des différentes parties du code :
+
+forEach : La méthode forEach itère sur chaque élément d'un tableau et exécute une fonction donnée sur chaque élément. Dans cet exemple,
+ la fonction Doubleforeach multiplie chaque nombre par 2 et affiche le résultat.
+
+map : La méthode map crée un nouveau tableau en appliquant une fonction à chaque élément du tableau d'origine. Ici,
+ la fonction DoubleMap double chaque élément du tableau num.
+
+filter : La méthode filter crée un nouveau tableau contenant uniquement les éléments qui satisfont à une condition donnée. Dans cet exemple, 
+seuls les nombres pairs sont conservés dans le tableau numbers1.
+
+reduce : La méthode reduce applique une fonction de callback sur chaque élément du tableau pour réduire les éléments à une seule valeur.
+ Ici, la somme de tous les éléments du tableau numbers2 est calculée.
+
+indexOf : La méthode indexOf renvoie l'indice de la première occurrence d'un élément donné dans le tableau. 
+Ici, l'indice de l'élément "poire" dans le tableau fruit est affiché.
+
+find : La méthode find renvoie la première valeur d'un tableau qui satisfait à une condition donnée. 
+Ici, le premier élément du tableau fruit dont la longueur est supérieure ou égale à 6 est affiché.
+
+every : La méthode every vérifie si tous les éléments d'un tableau satisfont à une condition donnée. 
+Ici, elle vérifie si tous les nombres du tableau numbers3 sont pairs.
+
+findIndex : La méthode findIndex renvoie l'indice du premier élément d'un tableau qui satisfait à une condition donnée. 
+Ici, l'indice du premier nombre supérieur à 25 dans le tableau numbers4 est affiché.
+
+Ces différentes méthodes permettent de manipuler efficacement les tableaux en JavaScript en effectuant des opérations telles que la transformation, le filtrage, la réduction et la recherche d'éléments spécifiques.
+
+Explique ça
+every
+La méthode every en JavaScript est une méthode qui est utilisée sur les tableaux. Elle permet de vérifier si tous les éléments du tableau satisfont à une condition donnée. La méthode every parcourt chaque élément du tableau et renvoie true si tous les éléments satisfont à la condition spécifiée, sinon elle renvoie false.
+
+Par exemple, si on a un tableau de nombres [2, 4, 6, 8, 10] et qu'on souhaite vérifier si tous les nombres sont pairs, on peut utiliser la méthode every de la manière suivante :
+
+const numbers = [2, 4, 6, 8, 10];
+const allNumbersAreEven = numbers.every((num) => num % 2 === 0);
+
+console.log(allNumbersAreEven); // true
+Dans cet exemple, la fonction de rappel (num) => num % 2 === 0 vérifie si chaque nombre du tableau est pair. La méthode every renvoie true car tous les nombres du tableau sont effectivement pairs. Si au moins un élément ne satisfait pas à la condition, la méthode every renverra false.
+
+En résumé, la méthode every est utile pour vérifier si tous les éléments d'un tableau respectent une condition donnée, et elle renvoie un seul booléen en fonction du résultat de la vérification.
